@@ -1,0 +1,196 @@
+html{
+	margin: 0;
+	padding: 0;
+}
+/*permet la mise à 0 des marges externes et internes*/
+
+body{
+	font-family: arial;
+}
+/* Défini la police de caractère qui sera utilisée dans tout le body du site.*/
+
+a{
+	text-decoration: none;
+	/* Va permettre d'afficher les liens comme des textes en supprimant le soulignement pour toutes les balises <a>*/
+	color: inherit;
+	/* Va permettre de faire que le texte hérite de la même couleur du texte initial sans prendre en compte la couleur associée au lien (bleu)*/
+}
+
+a:hover{
+	text-decoration: underline;
+	/* Lorsque la souris pointera sur le lien celui-ci sera soulgné*/
+	color: grey;
+	/* et il changera de couleur pour apparaitre en gris*/
+}
+
+/* _____________________ HEADER ____________________ */
+
+nav{
+	/* Va permettre de positionner et définir la taille des éléments au seins de la balise*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px 30px;
+	font-size: 14px;
+	margin-left: 20px
+}
+
+nav > a {
+	/* Va permettre d'attribuer les valeurs qu'aux enfants de la balises nav, ici a à qui l'ont va définir une marge gauche*/
+	margin-left: 20px;
+}
+
+nav button{
+	/* Va permettre de configurer le bouton présent dans la balise "Connexion"*/
+	background-color: #3f7bfc;
+	/* Couleur de l'arrière-plan du bouton ici "bleu Google"*/
+	border: none;
+	color: #fff;
+	/* Couleur du texte du bouton ici blanc */
+	padding: 0px 12px;
+	height: 30px;
+	border-radius: 2px;
+	font-size: 14px
+
+}
+
+/* _____________________ MAIN ____________________ */
+
+main {
+	/* Définition du positionnement général du corps principal de la page*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+}
+
+main .logo img{
+	/* Définition de la taille du logo */
+	height: 92px;
+	width: 272px;
+}
+
+main>.recherche{
+	/* Définition du format de la barre de recherche*/
+	height: 46px;
+	border: 1px solid #dfe1e5;
+	border-radius: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 600px;
+	margin: 20px 0;
+}
+
+main input{
+	/* Définition du format de la zone de saisie (input) dans la barre de recherche*/
+	display: flex;
+	flex-grow: 1;
+	border: none;
+	font-size: 18px
+}
+
+main input:focus{
+	outline: none;
+}
+
+main i,
+main .recherche img{
+	/* Défini la taille et le positionnement des images (loupe et micro) au sein de la barre de recherche*/
+	padding: 0 22px;
+	height: 24px;
+	width: 24px;
+}
+
+main .covid19{
+	/* Positionne et défini la taille de la partie et le texte dédiés au Covid-19*/
+	display: flex;
+	align-items: center;
+	margin: 30px;
+	color: #1a0dab;
+	font-size: 14px;
+}
+
+main .covid19:visited{
+	/* Va changer la couleur du lien Covid-19 une fois qu'il aura été visié*/
+	color: #609;
+}
+
+main .covid19 img{
+	/* formate l'image associée au Covid */
+	height: 45px;
+	width: 45px;
+	margin-right: 5px;
+}
+
+/* ____________________ FOOTER ____________________ */
+
+footer{
+	/* Va permettre de positionner l'ensemble de l'élément en bas de la page*/
+	background-color: #f2f2f2;
+	color: #9aa0a6;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	font-size: 14px;
+}
+
+footer > div{
+	/* Met en page les <div> à l'intérieur de l'élément*/
+	border-top: 1px solid #e4e4e4;
+	padding: 8px 16px;
+}
+
+footer .ligne1{
+	/* Formate la ligne 1 */
+	color: #222;
+	opacity: .54;
+}
+
+footer .ligne2{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+color: #5f6368;
+}
+
+footer .ligne2 a:not(:first-child){
+	padding-left: 27px;
+}
+
+/* ____________________ FOOTER RESPONSIVE ____________________ */
+
+@media screen and (max-width: 1200px){
+	footer .ligne2{
+		flex-direction: column;
+		align-items: center
+	}
+
+	footer .ligne2 div:not(:first-child){
+		margin-top: 5px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
